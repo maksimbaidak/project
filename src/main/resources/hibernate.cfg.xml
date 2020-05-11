@@ -1,0 +1,20 @@
+<hibernate-configuration>
+ <session-factory>
+  <property name="hibernate.connection.driver_class">org.postgresql.Driver</property>
+  <property name="hibernate.connection.url">jdbc:postgresql://127.0.0.1:5432/test</property>
+  <property name="hibernate.connection.username">postgres</property>
+  <property name="hibernate.connection.password">rootadmin</property>
+  <property name="hibernate.dialect">org.hibernate.dialect.PostgreSQL9Dialect</property>
+  <property name="format_sql">true</property>
+  <property name="hibernate.hbm2ddl.auto">create-drop</property>
+  
+  <property name="hibernate.c3p0.min_size">1</property>
+  <property name="hibernate.c3p0.max_size">1</property>
+  <property name="hibernate.c3p0.timeout">1800</property>
+  <property name="hibernate.c3p0.max_statements">1</property>
+  <property name="hibernate.c3p0.idle_test_period">3000</property>
+  
+  <mapping class="com.baidakm.notes.storage.domain.User"/>
+  <mapping class="com.baidakm.notes.storage.domain.Note"/>
+</session-factory>
+</hibernate-configuration>
